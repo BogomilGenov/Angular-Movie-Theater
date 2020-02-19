@@ -10,8 +10,8 @@ export class MovieComponent implements OnInit {
   @Input('movie')
   movie: Movie; 
 
-  @Output()
-  clickButtonEmitter: EventEmitter<number> = new EventEmitter<number>(); 
+  // @Output()
+  // clickButtonEmitter: EventEmitter<number> = new EventEmitter<number>(); 
   imagePath: string; 
   constructor() { }
 
@@ -20,9 +20,9 @@ export class MovieComponent implements OnInit {
     this.imagePath = 'http://image.tmdb.org/t/p/w500' + this.movie.poster_path; 
   }
 
-  clickButton(){
-    console.log('button with id - ' + this.movie.id);
-    this.clickButtonEmitter.emit(this.movie.id);
-  }
+  // clickButton(){
+  //   console.log('button with id - ' + this.movie.id);
+  //   this.clickButtonEmitter.emit(this.movie.id);
+  // }
 
 }
